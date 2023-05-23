@@ -72,9 +72,11 @@ a {
 header {
   border-bottom: 1px solid var(--line-color);
 }
-
 .hero {
-  background-color: var(--background-header-color);
+  /*background-image: url(./images/background-hero.jpg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -181,7 +183,13 @@ header {
   color: var(--secondary-text-color);
   background-color: var(--button-color);
 }
-
+.footer {
+  background-color: var(--background-footer-color);
+}
+.bottom {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .bottom-contact {
   line-height: 1.71;
 }
@@ -212,14 +220,18 @@ header {
 .bottom-contact-address:hover,
 .bottom-contact-address:focus,
 .bottom-contact-link:hover,
-.bottom-contact-link:focus {
+.bottom-contact-link:focus,
+.icon-contact:focus,
+.icon-contact:hover {
   color: var(--fourth-text-color);
   cursor: pointer;
 }
+
 /*end links*/
 
 /*studio-name - > color of name Studio Web */
-.studio-name-top {
+.logo-top,
+.logo-bottom {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-style: bold;
@@ -228,22 +240,13 @@ header {
   text-decoration: none;
   margin-right: 94px;
 }
-.studio-name-bottom {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 26px;
-  line-height: 1.17;
-  text-decoration: none;
-}
-
-.studio-name-web {
+.name-1 {
   color: var(--logo-web-color);
 }
-.studio-name-top {
+.name-2 {
   color: var(--logo-studio-first-color);
 }
-.studio-name-bottom {
+.name-3 {
   color: var(--logo-studio-second-color);
 }
 
@@ -288,6 +291,7 @@ header {
   font-size: 16px;
   line-height: 1.17;
   color: var(--third-text-color);
+  margin-bottom: 16px;
 }
 /*end team name*/
 .lorem {
@@ -349,6 +353,28 @@ header {
   color: var(--third-text-color);
   text-align: left;
 }
-.bottom {
-  background-color: var(--background-footer-color);
+
+/* ----- icons -----*/
+
+.icon-contact:focus,
+.icon-contact:hover {
+  fill: var(--fourth-text-color);
+  cursor: pointer;
 }
+.social-icon {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+/*.social-icon > use {
+  width: 20;
+  height: 20;
+}*/
+.lorem-icon {
+  text-align: center;
+  background-color: var(--background-button-color);
+  margin-bottom: 30px;
+}
+
+/* ----- end icons ----- */
