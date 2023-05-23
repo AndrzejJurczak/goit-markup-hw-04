@@ -184,6 +184,7 @@ header {
   background-color: var(--button-color);
 }
 .footer {
+  display: flex;
   background-color: var(--background-footer-color);
 }
 .bottom {
@@ -354,6 +355,16 @@ header {
   text-align: left;
 }
 
+/* ----- nasi klienci - our client-----*/
+.our-client {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* ----- end nasi klienci - our client-----*/
+
 /* ----- icons -----*/
 
 .icon-contact:focus,
@@ -376,5 +387,29 @@ header {
   background-color: var(--background-button-color);
   margin-bottom: 30px;
 }
-
+.our-client-logo {
+  display: flex;
+  justify-content: space-between;
+}
+.our-client-logo > svg {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+}
+.social-bottom {
+}
+.social-bottom > p {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+.social-icon-2 {
+  display: flex;
+}
+.social-icon-2 > svg {
+  width: 20px;
+  height: 20px;
+}
 /* ----- end icons ----- */
