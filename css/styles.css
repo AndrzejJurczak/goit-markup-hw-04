@@ -182,6 +182,7 @@ header {
   border: #fff;
   border-radius: 4px;
   padding: 6px 22px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .button-portfolio-item:hover,
 .button-portfolio-item:focus {
@@ -202,6 +203,7 @@ header {
 }
 .address {
   margin-top: 20px;
+  max-width: 246px;
 }
 .bottom-contact-item:not(:last-child) {
   margin-bottom: 9px;
@@ -250,7 +252,6 @@ header {
   font-style: bold;
   font-size: 26px;
   line-height: 1.17;
-  text-decoration: none;
   margin-right: 94px;
 }
 .name-1 {
@@ -398,10 +399,13 @@ header {
   height: 20px;
   margin: 12px;
 }
-.social-icon:hover use,
-.social-icon:focus use {
-  fill: #2196f3;
+.social-icon svg:hover,
+.social-icon svg:focus {
+  fill: var(--background-body-color);
+  background: var(--fourth-text-color);
   border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  clip-path: ellipse(44px 44px center);
 }
 .lorem-icon {
   text-align: center;
@@ -428,12 +432,22 @@ header {
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 20px;
-  margin-left: 70px;
 }
-.social-icon-footer {
+.social-icon-footer-list {
   display: flex;
-  fill: #afb1b8;
+  fill: var(--background-body-color);
+}
+.social-icon-footer-list > svg {
   width: 20px;
   height: 20px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
 }
 /* ----- end icons ----- */

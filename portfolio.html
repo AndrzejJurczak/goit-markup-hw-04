@@ -39,12 +39,10 @@
         <nav class="navigation">
           <ul class="navigation-list list">
             <li class="navigation-item">
-              <a href="./index.html" class="navigation-link">Agencja</a>
+              <a href="./index.html" class="navigation-link current">Agencja</a>
             </li>
             <li class="navigation-item">
-              <a href="./portfolio.html" class="navigation-link current"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="navigation-link">Portfolio</a>
             </li>
             <li class="navigation-item">
               <a href="#stopka" class="navigation-link">Kontakt</a>
@@ -53,19 +51,25 @@
         </nav>
         <ul class="navigation-contact-list list">
           <li class="navigation-contact-item">
-            <svg class="icon-contact" width="16" height="12">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
             <a href="mailto:info@devstudio.com" class="navigation-contact-link"
-              >info@devstudio.com</a
+              ><svg class="icon-contact" width="16" height="12">
+                <use
+                  class="icon-envelope"
+                  href="./images/icons.svg#icon-envelope"
+                ></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="navigation-contact-item">
-            <svg class="icon-contact" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            <a href="tel:+48111111111" class="navigation-contact-link"
-              >+48 111 111 111</a
+            <a href="tel:+48111111111" class="navigation-contact-link">
+              <svg class="icon-contact" width="10" height="16">
+                <use
+                  class="icon-smartphone"
+                  href="./images/icons.svg#icon-smartphone"
+                ></use>
+              </svg>
+              +48 111 111 111</a
             >
           </li>
         </ul>
