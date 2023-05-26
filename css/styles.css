@@ -20,6 +20,9 @@
   --background-section-color: #fff;
   --background-section-second-color: #f5f4fa;
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --currentColor: #2196f3;
+  --borderColor: #eee;
+  --iconStyle: #afb1b8;
 }
 /* end global variables */
 
@@ -76,7 +79,9 @@ header {
   border-bottom: 1px solid var(--line-color);
 }
 .hero {
-  background-image: url(../images/background.jpg);
+  background-image: linear-gradient
+    (rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background: url(../images/background.jpg);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,13 +195,11 @@ header {
   background-color: var(--button-color);
 }
 .footer {
-  display: flex;
-  background-color: var(--background-footer-color);
-  align-items: center;
-}
-.bottom {
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  background-color: var(--background-footer-color);
+  align-items: baseline;
 }
 .bottom-contact {
   line-height: 1.71;
@@ -239,7 +242,7 @@ header {
 .navigation-contact-link:hover {
   color: var(--fourth-text-color);
   cursor: pointer;
-  fill: #2196f3;
+  fill: var(--currentColor);
 }
 
 /*end links*/
@@ -354,9 +357,9 @@ header {
 }
 .about-client {
   padding: 20px 24px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
+  border-right: 1px solid var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
+  border-left: 1px solid var(--borderColor);
 }
 .client-name {
   font-weight: 700;
@@ -387,45 +390,56 @@ header {
 .icon-contact {
   margin-right: 10px;
 }
-.social-icon {
+.social-icon-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-right: 32px;
   margin-left: 32px;
+  width: 206;
+  height: 56;
 }
-.social-icon svg {
-  fill: #afb1b8;
-  width: 20px;
+.social-icon-list svg {
+  fill: var(--iconStyle);
+  width: 44px;
   height: 20px;
-  margin: 12px;
+  background-color: var(--main-bacground-color);
 }
-.social-icon svg:hover,
-.social-icon svg:focus {
-  fill: var(--background-body-color);
-  background: var(--fourth-text-color);
+.social-icon-list svg:hover,
+.social-icon-list svg:focus {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  fill: var(--background-body-color);
+  background-color: var(--fourth-text-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  clip-path: ellipse(44px 44px center);
 }
 .lorem-icon {
   text-align: center;
   background-color: var(--background-button-color);
   margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+}
+.lorem-icon svg {
+  margin: 25px 100px;
+  width: 70px;
+  height: 70px;
 }
 .our-client-logo {
   display: flex;
   justify-content: space-between;
 }
 .our-client-logo > svg {
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
+  fill: var(--iconStyle);
+  border: 1px solid var(--iconStyle);
   border-radius: 4px;
   width: 170px;
   height: 90px;
 }
 .our-client-logo > svg:hover,
 .our-client-logo > svg:focus {
-  fill: #2196f3;
+  fill: var(--currentColor);
+  border-color: var(--currentColor);
 }
 .social-title {
   font-weight: 700;
@@ -433,18 +447,33 @@ header {
   color: var(--secondary-text-color);
   margin-bottom: 20px;
 }
-.social-icon-footer-list {
-  display: flex;
-  fill: var(--background-body-color);
+
+.social-icon-footer {
+  margin-left: 70px;
+  width: 206px;
+  height: 80px;
 }
-.social-icon-footer-list > svg {
+.social-icon-footer-list {
+  display: block;
+  justify-content: space-around;
+}
+.social-icon-footer-list svg {
+  fill: var(--background-body-color);
   width: 20px;
   height: 20px;
+
+  /*background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );*/
+}
+.social-icon-footer-list > svg:hover,
+.social-icon-footer-list > svg:focus {
+  background: var(--fourth-text-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 1);
-  border-radius: 50%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   background-image: linear-gradient(
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
