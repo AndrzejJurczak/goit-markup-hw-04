@@ -13,9 +13,10 @@
   --logo-studio-second-color: #fff;
   --button-text-color: #000;
   --line-color: #ececec;
-  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --footer-color--1: rgba(255, 255, 255, 0.6);
+  --footer-color--2: rgba(255, 255, 255, 0.1);
   --borderColor: #eee;
-  --iconStyle: #afb1b8;
+  --icon-style: #afb1b8;
 }
 /* end global variables */
 
@@ -194,9 +195,7 @@ header {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
   background-color: var(--background-color-2);
-  align-items: baseline;
 }
 .bottom-contact {
   line-height: 1.71;
@@ -218,7 +217,7 @@ header {
 .bottom-contact-link {
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--footer-text-color);
+  color: var(--footer-color--1);
   text-decoration: inherit;
   font-style: normal;
 }
@@ -266,7 +265,7 @@ header {
 
 /* team name */
 .about-us-team-name {
-  background-color: var(--background-color-1);
+  background-color: var(--fifth-color);
 }
 .team-name-title {
   text-align: center;
@@ -347,9 +346,15 @@ header {
   flex-wrap: wrap;
   gap: 30px;
 }
-.our-customer-item:hover,
-.our-custmoer-item:focus,
-.our-customers-item:active {
+.our-customers-list:focus,
+.our-customers-list:hover,
+.our-customers-item a:hover,
+.our-customers-item a:focus,
+.our-customers-item:hover,
+.our-customers-item:focus,
+.our-customers-link:hover,
+.our-customers-link:focus {
+  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .about-client {
@@ -405,10 +410,11 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--iconStyle);
+  color: var(--icon-style);
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
+  cursor: pointer;
   color: var(--background-color-1);
   background-color: var(--fourth-color);
 }
@@ -428,20 +434,27 @@ header {
 .our-client-logo-list {
   display: flex;
   gap: 30px;
-  fill: var(--iconStyle);
-  border-radius: 4px;
 }
-.our-client-logo svg {
+.our-client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--iconStyle);
+  border: 1px solid currentColor;
+  color: var(--icon-style);
   border-radius: 4px;
 }
-.our-client-logo-item svg:hover,
-.our-client-logo-item svg:focus {
-  fill: var(--fourth-color);
-  border: 1px solid var(--fourth-color);
+.our-client-link:hover,
+.our-client-link:focus {
+  cursor: pointer;
+  color: var(--fourth-color);
 }
+
+.our-client-logo-list svg {
+  fill: currentColor;
+}
+
 .social-title {
   font-weight: 700;
   text-transform: uppercase;
@@ -461,21 +474,22 @@ header {
   height: 20px;
   fill: var(--background-color-1);
 }
-.social-icon-footer-item {
+.social-icon-footer-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--background-color-1);
-}
-.social-icon-footer-item:hover,
-.social-icon-footer-item:focus {
-  fill: red;
-  background: var(--fourth-color);
-  border: 1px solid rgba(0, 0, 0, 1);
+  background-color: var(--footer-color--2);
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.social-icon-footer-link:hover,
+.social-icon-footer-link:focus {
+  border-radius: 50%;
+  fill: currentColor;
+  background: var(--fourth-color);
 }
 /* ----- end icons ----- */
 .footer-wrap {
